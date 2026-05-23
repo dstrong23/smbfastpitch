@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SMB Fastpitch | Bio</title>
+    <meta name="description" content="Coach bio, credentials, and softball development philosophy." />
+    <style>
+      :root { --bg:#f4f4f4; --paper:#fff; --ink:#101010; --accent:#ef7b68; --line:#d9d9d9; --max:960px; }
+      *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Segoe UI,Arial,sans-serif}
+      .container{width:min(100% - 2rem,var(--max));margin-inline:auto} a{text-decoration:none;color:inherit}
+      header{position:sticky;top:0;background:#fffffff0;border-bottom:1px solid var(--line)} .head{min-height:72px;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+      .brand{font-weight:900;text-transform:uppercase} .nav{display:flex;gap:.35rem;flex-wrap:wrap} .nav a{padding:.52rem .75rem;border-radius:10px;font-weight:600} .nav a:hover,.nav a:focus-visible{background:#ffe8e3;outline:none}
+      main{padding:1.8rem 0} .card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:1.2rem}
+      h1{margin:.25rem 0 .7rem;font-size:clamp(1.7rem,4vw,2.7rem);text-transform:uppercase} .accent{color:#d96452}
+      .tag{display:inline-block;background:#fee7e2;padding:.3rem .6rem;border-radius:999px;font-weight:800;font-size:.8rem;text-transform:uppercase}
+      .grid{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1rem} ul{margin:.5rem 0 .2rem;padding-left:1.15rem}
+      li{margin-bottom:.45rem} footer{border-top:1px solid var(--line);margin-top:2rem}.foot{padding:1rem 0 1.5rem;color:#555}
+      @media (min-width:820px){.grid{grid-template-columns:1fr 1fr}}
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container head">
+        <a href="index.html" class="brand">SMB Fastpitch</a>
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="bio.html" aria-current="page">Bio</a>
+          <a href="signup.html">Sign Up</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <section class="card">
+          <span class="tag">Coach Bio</span>
+          <h1>Meet Your <span class="accent">Pitching Coach</span></h1>
+          <p>I help athletes build confidence and command in the circle through detailed mechanics, strategic thinking, and competitive mindset training.</p>
+        </section>
+
+        <section class="grid" aria-label="Bio highlights">
+          <article class="card">
+            <h2>Coaching Philosophy</h2>
+            <p>Every athlete learns differently. Sessions are customized to improve consistency, spin efficiency, control, and game-time decision making.</p>
+          </article>
+          <article class="card">
+            <h2>Who I Train</h2>
+            <p>Beginners, intermediate, and advanced pitchers are all welcome. We build strong fundamentals first, then layer advanced tools and strategy.</p>
+          </article>
+          <article class="card">
+            <h2>Focus Areas</h2>
+            <ul>
+              <li>Pitch mechanics and movement quality</li>
+              <li>Velocity progression and command</li>
+              <li>Mental approach and confidence</li>
+              <li>Game planning and hitter reads</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h2>Service Area</h2>
+            <p>East Bay / Brentwood area, with scheduling options for private instruction and recurring development plans.</p>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container foot">© <span id="year">2026</span> SMB Fastpitch</div>
+    </footer>
+    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  </body>
+</html>
