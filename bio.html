@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SMB Fastpitch | Bio</title>
+    <meta name="description" content="Learn more about SMB Fastpitch, our mission, and coaching philosophy." />
+    <style>
+      :root{--bg:#f7f9fc;--surface:#fff;--text:#16202a;--muted:#4c5d70;--brand:#005bbb;--brand2:#003f80;--border:#d9e2ec;--radius:14px;--max:900px}
+      *{box-sizing:border-box} body{margin:0;font-family:Inter,"Segoe UI",Roboto,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.55}
+      a{text-decoration:none;color:inherit}.container{width:min(100% - 2rem,var(--max));margin-inline:auto}
+      header{position:sticky;top:0;background:#ffffffef;backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+      .head{min-height:70px;display:flex;justify-content:space-between;align-items:center;gap:1rem}.nav{display:flex;gap:.4rem;flex-wrap:wrap}
+      .nav a{padding:.5rem .75rem;border-radius:10px;color:var(--muted)} .nav a:hover,.nav a:focus-visible{background:#eaf2ff;color:var(--brand2);outline:none}
+      main{padding:2.2rem 0}.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem}
+      h1{font-size:clamp(1.75rem,3vw,2.4rem);margin:.2rem 0 .75rem} h2{margin-top:1.2rem}
+      .muted{color:var(--muted)} .grid{display:grid;gap:1rem;margin-top:1rem;grid-template-columns:1fr}
+      .pill{display:inline-block;background:#eaf2ff;color:var(--brand2);padding:.25rem .6rem;border-radius:999px;font-weight:600;font-size:.9rem}
+      footer{border-top:1px solid var(--border);padding:1.5rem 0;color:var(--muted)}
+      @media (min-width:800px){.grid{grid-template-columns:1fr 1fr}}
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container head">
+        <a href="index.html"><strong>SMB Fastpitch</strong></a>
+        <nav class="nav" aria-label="Primary navigation">
+          <a href="index.html">Home</a>
+          <a href="bio.html" aria-current="page">Bio</a>
+          <a href="signup.html">Sign Up</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <span class="pill">About Us</span>
+        <h1>Our Team Bio</h1>
+        <p class="muted">SMB Fastpitch focuses on skill development, confidence, and competitive growth in a positive team-first environment.</p>
+
+        <section class="card" aria-label="Mission and philosophy">
+          <h2>Mission</h2>
+          <p>Develop well-rounded athletes through strong fundamentals, consistent effort, and respectful sportsmanship on and off the field.</p>
+          <h2>Coaching Philosophy</h2>
+          <p>We coach with a balance of accountability and encouragement, emphasizing mechanics, game IQ, and mental toughness.</p>
+        </section>
+
+        <section class="grid" aria-label="Program highlights">
+          <article class="card">
+            <h2>Player Development</h2>
+            <p>Age-appropriate training plans with clear progression in hitting, fielding, pitching, and baserunning.</p>
+          </article>
+          <article class="card">
+            <h2>Team Culture</h2>
+            <p>Communication, commitment, and support are the foundation of how we compete and represent our community.</p>
+          </article>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="container">© <span id="year">2026</span> SMB Fastpitch</div>
+    </footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  </body>
+</html>
