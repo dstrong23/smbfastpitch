@@ -129,7 +129,9 @@
       .cred-list li { margin-bottom: .4rem; }
 
       footer { border-top: 1px solid var(--line); margin-top: 2rem; }
-      .foot { padding: 1rem 0 1.8rem; color: #555; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+      .foot { padding: 1rem 0 1.8rem; color: #555; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+      .footer-links { display: flex; gap: 1rem; flex-wrap: wrap; font-weight: 700; }
+      .footer-links a:hover,.footer-links a:focus-visible { color: var(--accent-dark); outline: none; }
 
       @media (min-width: 860px) {
         .hero-wrap { grid-template-columns: 1.4fr 1fr; }
@@ -412,8 +414,14 @@
 
     <footer>
       <div class="container foot">
-        <span>© <span id="year">2026</span> Vanaessa Strong Softball</span>
-        <span>DM to schedule • Private instruction available</span>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="bio.html">Bio</a>
+          <a href="signup.html">Sign Up</a>
+        </nav>
+      </div>
+    </footer>
+
     <main>
       <section class="hero">
         <div class="container hero-grid">
@@ -467,7 +475,11 @@
 
     <footer class="site-footer">
       <div class="container">
-        © <span id="year">2026</span> Vanaessa Strong Softball. All rights reserved.
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="index.html">Home</a>
+          <a href="bio.html">Bio</a>
+          <a href="signup.html">Sign Up</a>
+        </nav>
       </div>
     </footer>
 
