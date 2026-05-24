@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>SMB Fastpitch | Elite Softball Pitching</title>
+    <title>Vanaessa Strong Softball | Elite Softball Pitching</title>
     <meta
       name="description"
       content="Elite softball pitching instruction with a high-performance, confidence-building approach."
@@ -76,6 +76,17 @@
       }
       .accent { color: var(--accent-dark); }
       .lead { margin: 0; color: var(--muted); max-width: 52ch; font-size: 1.05rem; }
+      .hero-heading-wrap {
+        display: grid;
+        gap: 1rem;
+        align-items: center;
+      }
+      .marquee-image {
+        display: block;
+        width: min(100%, 320px);
+        justify-self: center;
+        filter: drop-shadow(0 18px 22px rgba(0,0,0,0.18));
+      }
       .script {
         margin: 1rem 0 0;
         display: inline-block;
@@ -122,10 +133,11 @@
 
       @media (min-width: 860px) {
         .hero-wrap { grid-template-columns: 1.4fr 1fr; }
-    <title>SMB Fastpitch | Home</title>
+        .hero-heading-wrap { grid-template-columns: minmax(0, 1fr) minmax(180px, 320px); }
+    <title>Vanaessa Strong Softball | Home</title>
     <meta
       name="description"
-      content="SMB Fastpitch official site — news, team bio, and sign-up information."
+      content="Vanaessa Strong Softball official site — news, team bio, and sign-up information."
     />
     <style>
       :root {
@@ -348,9 +360,9 @@
   <body>
     <header class="site-header">
       <div class="container head">
-        <a href="index.html" class="brand">SMB Fastpitch</a>
+        <a href="index.html" class="brand">Vanaessa Strong Softball</a>
       <div class="container header-inner">
-        <a class="logo" href="index.html">SMB Fastpitch</a>
+        <a class="logo" href="index.html">Vanaessa Strong Softball</a>
         <nav class="nav" aria-label="Primary navigation">
           <a href="index.html" aria-current="page">Home</a>
           <a href="bio.html">Bio</a>
@@ -362,9 +374,14 @@
     <main class="hero">
       <div class="container hero-wrap">
         <section class="panel">
-          <span class="kicker">Elite Softball</span>
-          <h1>Pitching <span class="accent">Lessons</span></h1>
-          <p class="lead">Build confidence. Refine your skills. Elevate your game with focused, one-on-one instruction tailored to every athlete.</p>
+          <div class="hero-heading-wrap">
+            <div>
+              <span class="kicker">Elite Softball</span>
+              <h1>Pitching <span class="accent">Lessons</span></h1>
+              <p class="lead">Build confidence. Refine your skills. Elevate your game with focused, one-on-one instruction tailored to every athlete.</p>
+            </div>
+            <img class="marquee-image" src="images/marquee-vanessa.png" alt="Vanessa pitching for Vanaessa Strong Softball" />
+          </div>
           <p class="script">Train with a high-level pitcher</p>
 
           <div class="points" aria-label="Lesson highlights">
@@ -395,7 +412,7 @@
 
     <footer>
       <div class="container foot">
-        <span>© <span id="year">2026</span> SMB Fastpitch</span>
+        <span>© <span id="year">2026</span> Vanaessa Strong Softball</span>
         <span>DM to schedule • Private instruction available</span>
     <main>
       <section class="hero">
@@ -403,7 +420,7 @@
           <article class="card hero-copy">
             <h1>Fastpitch community, built for growth.</h1>
             <p class="lead">
-              Welcome to SMB Fastpitch. This starter homepage is designed to
+              Welcome to Vanaessa Strong Softball. This starter homepage is designed to
               work smoothly across phones, tablets, and desktops while giving
               you a clean base to expand your content.
             </p>
@@ -450,7 +467,7 @@
 
     <footer class="site-footer">
       <div class="container">
-        © <span id="year">2026</span> SMB Fastpitch. All rights reserved.
+        © <span id="year">2026</span> Vanaessa Strong Softball. All rights reserved.
       </div>
     </footer>
 
