@@ -4,6 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>SMB Fastpitch | Sign Up</title>
+    <meta name="description" content="Book softball pitching lessons and receive SMB Fastpitch updates." />
+    <style>
+      :root { --bg:#f4f4f4; --paper:#fff; --ink:#111; --accent:#ef7b68; --line:#d8d8d8; --max:860px; }
+      *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Segoe UI,Arial,sans-serif}
+      .container{width:min(100% - 2rem,var(--max));margin-inline:auto} a{text-decoration:none;color:inherit}
+      header{position:sticky;top:0;background:#fffffff0;border-bottom:1px solid var(--line)} .head{min-height:72px;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+      .brand{font-weight:900;text-transform:uppercase}.nav{display:flex;gap:.35rem;flex-wrap:wrap}.nav a{padding:.52rem .75rem;border-radius:10px;font-weight:600}.nav a:hover,.nav a:focus-visible{background:#ffe8e3;outline:none}
+      main{padding:1.7rem 0}.card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:1.2rem}
+      .tag{display:inline-block;background:#fee7e2;padding:.3rem .6rem;border-radius:999px;font-weight:800;font-size:.8rem;text-transform:uppercase}
+      h1{margin:.55rem 0 .45rem;font-size:clamp(1.65rem,4vw,2.5rem);text-transform:uppercase}.accent{color:#d96452}
+      form{display:grid;gap:.85rem;margin-top:1rem}.field{display:grid;gap:.3rem}.two{display:grid;grid-template-columns:1fr;gap:.85rem}
+      label{font-weight:700} input,select,textarea{font:inherit;padding:.68rem .72rem;border:1px solid #bfc6cc;border-radius:10px;background:#fff}
+      input:focus,select:focus,textarea:focus{outline:2px solid #ffb3a6;outline-offset:1px;border-color:#e58c7b}
+      .btn{margin-top:.2rem;border:0;background:#111;color:#fff;padding:.82rem 1rem;border-radius:10px;font-weight:800;text-transform:uppercase;cursor:pointer}
+      .btn:hover,.btn:focus-visible{background:#2d2d2d}
+      footer{border-top:1px solid var(--line);margin-top:2rem}.foot{padding:1rem 0 1.5rem;color:#555}
+      @media (min-width:760px){.two{grid-template-columns:1fr 1fr}}
     <meta name="description" content="Sign up for SMB Fastpitch updates, tryouts, and clinic information." />
     <style>
       :root{--bg:#f7f9fc;--surface:#fff;--text:#16202a;--muted:#4c5d70;--brand:#005bbb;--brand2:#003f80;--border:#d9e2ec;--radius:14px;--max:860px}
@@ -26,6 +43,7 @@
   <body>
     <header>
       <div class="container head">
+        <a href="index.html" class="brand">SMB Fastpitch</a>
         <a href="index.html"><strong>SMB Fastpitch</strong></a>
         <nav class="nav" aria-label="Primary navigation">
           <a href="index.html">Home</a>
@@ -37,6 +55,9 @@
 
     <main>
       <div class="container card">
+        <span class="tag">Now Booking Lessons</span>
+        <h1>Request a <span class="accent">Session</span></h1>
+        <p>Tell us about your athlete and goals. We’ll follow up with availability and next steps.</p>
         <h1>Sign Up for Updates</h1>
         <p class="muted">Complete this form to receive announcements for tryouts, clinics, and team events.</p>
 
@@ -64,6 +85,13 @@
           </div>
 
           <div class="field">
+            <label for="interest">Primary Focus</label>
+            <select id="interest" name="interest" required>
+              <option value="" selected disabled>Select one</option>
+              <option value="mechanics">Mechanics</option>
+              <option value="velocity">Velocity + Control</option>
+              <option value="mental-approach">Mental Approach</option>
+              <option value="general">General Development</option>
             <label for="interest">Primary Interest</label>
             <select id="interest" name="interest" required>
               <option value="" selected disabled>Select one</option>
@@ -75,6 +103,11 @@
           </div>
 
           <div class="field">
+            <label for="message">Athlete Goals</label>
+            <textarea id="message" name="message" rows="5" placeholder="Share age, experience level, and goals."></textarea>
+          </div>
+
+          <button type="submit" class="btn">Submit Request</button>
             <label for="message">Message (optional)</label>
             <textarea id="message" name="message" rows="5" placeholder="Anything you'd like us to know?"></textarea>
           </div>
@@ -85,6 +118,9 @@
     </main>
 
     <footer>
+      <div class="container foot">© <span id="year">2026</span> SMB Fastpitch</div>
+    </footer>
+    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
       <div class="container">© <span id="year">2026</span> SMB Fastpitch</div>
     </footer>
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>

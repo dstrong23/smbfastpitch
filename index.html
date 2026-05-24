@@ -3,6 +3,125 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SMB Fastpitch | Elite Softball Pitching</title>
+    <meta
+      name="description"
+      content="Elite softball pitching instruction with a high-performance, confidence-building approach."
+    />
+    <style>
+      :root {
+        --bg: #f4f4f4;
+        --paper: #ffffff;
+        --ink: #080808;
+        --muted: #444;
+        --accent: #ef7b68;
+        --accent-dark: #d96452;
+        --line: #dadada;
+        --max: 1120px;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+        color: var(--ink);
+        background: var(--bg);
+      }
+      a { color: inherit; text-decoration: none; }
+      .container { width: min(100% - 2rem, var(--max)); margin-inline: auto; }
+
+      .site-header {
+        position: sticky; top: 0; z-index: 50;
+        background: rgba(255,255,255,0.93);
+        border-bottom: 1px solid var(--line);
+        backdrop-filter: blur(8px);
+      }
+      .head {
+        min-height: 74px;
+        display: flex; align-items: center; justify-content: space-between;
+        gap: 1rem;
+      }
+      .brand { font-weight: 900; letter-spacing: .5px; text-transform: uppercase; }
+      .nav { display: flex; gap: .35rem; flex-wrap: wrap; }
+      .nav a { padding: .55rem .8rem; border-radius: 10px; font-weight: 600; color: #333; }
+      .nav a:hover,.nav a:focus-visible { background: #ffe8e3; color: #111; outline: none; }
+
+      .hero { padding: 2rem 0 1rem; }
+      .hero-wrap {
+        display: grid; gap: 1rem;
+        grid-template-columns: 1fr;
+      }
+      .panel {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 1.25rem;
+      }
+      .kicker {
+        display: inline-block;
+        font-size: .78rem;
+        font-weight: 800;
+        letter-spacing: .8px;
+        text-transform: uppercase;
+        padding: .34rem .6rem;
+        background: #fee7e2;
+        color: #62261e;
+        border-radius: 999px;
+      }
+      h1 {
+        margin: .75rem 0 .65rem;
+        line-height: 1.05;
+        font-size: clamp(2rem, 6vw, 4.2rem);
+        text-transform: uppercase;
+      }
+      .accent { color: var(--accent-dark); }
+      .lead { margin: 0; color: var(--muted); max-width: 52ch; font-size: 1.05rem; }
+      .script {
+        margin: 1rem 0 0;
+        display: inline-block;
+        background: var(--accent);
+        color: #111;
+        font-size: clamp(1.1rem, 3vw, 1.65rem);
+        padding: .35rem .75rem;
+        border-radius: 6px;
+        font-family: "Brush Script MT", "Segoe Script", cursive;
+      }
+
+      .points { margin-top: 1rem; display: grid; gap: .55rem; }
+      .point {
+        font-size: clamp(1.05rem, 2.6vw, 1.55rem);
+        font-weight: 800;
+        border-bottom: 2px solid #f2b6ab;
+        padding-bottom: .4rem;
+      }
+
+      .cta-row { margin-top: 1rem; display: flex; gap: .65rem; flex-wrap: wrap; }
+      .btn {
+        padding: .78rem 1rem;
+        border-radius: 10px;
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: .92rem;
+      }
+      .btn-primary { background: var(--ink); color: #fff; }
+      .btn-primary:hover,.btn-primary:focus-visible { background: #242424; }
+      .btn-secondary { background: #ffe6e1; color: #111; }
+
+      .quote {
+        font-style: italic;
+        font-weight: 700;
+        font-size: clamp(1.25rem, 2.2vw, 1.8rem);
+        line-height: 1.2;
+      }
+
+      .cred-list { margin: .4rem 0 0; padding-left: 1.1rem; }
+      .cred-list li { margin-bottom: .4rem; }
+
+      footer { border-top: 1px solid var(--line); margin-top: 2rem; }
+      .foot { padding: 1rem 0 1.8rem; color: #555; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+
+      @media (min-width: 860px) {
+        .hero-wrap { grid-template-columns: 1.4fr 1fr; }
     <title>SMB Fastpitch | Home</title>
     <meta
       name="description"
@@ -228,6 +347,8 @@
   </head>
   <body>
     <header class="site-header">
+      <div class="container head">
+        <a href="index.html" class="brand">SMB Fastpitch</a>
       <div class="container header-inner">
         <a class="logo" href="index.html">SMB Fastpitch</a>
         <nav class="nav" aria-label="Primary navigation">
@@ -238,6 +359,44 @@
       </div>
     </header>
 
+    <main class="hero">
+      <div class="container hero-wrap">
+        <section class="panel">
+          <span class="kicker">Elite Softball</span>
+          <h1>Pitching <span class="accent">Lessons</span></h1>
+          <p class="lead">Build confidence. Refine your skills. Elevate your game with focused, one-on-one instruction tailored to every athlete.</p>
+          <p class="script">Train with a high-level pitcher</p>
+
+          <div class="points" aria-label="Lesson highlights">
+            <div class="point">1-on-1 Pitching Instruction</div>
+            <div class="point">Spin • Velocity • Control</div>
+            <div class="point">Mental Approach &amp; Game Strategy</div>
+            <div class="point">All Skill Levels Welcome</div>
+          </div>
+
+          <div class="cta-row">
+            <a href="signup.html" class="btn btn-primary">Now Booking Lessons</a>
+            <a href="bio.html" class="btn btn-secondary">Meet the Coach</a>
+          </div>
+        </section>
+
+        <aside class="panel" aria-label="Coach credentials">
+          <p class="quote">“Build confidence. Refine your skills. Elevate your game.”</p>
+          <h2>Coach Snapshot</h2>
+          <ul class="cred-list">
+            <li>Former collegiate athlete with advanced softball experience</li>
+            <li>Focus on mechanics, pitch design, and game IQ</li>
+            <li>Supportive coaching style with measurable progress</li>
+            <li>Serving East Bay / Brentwood-area athletes</li>
+          </ul>
+        </aside>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container foot">
+        <span>© <span id="year">2026</span> SMB Fastpitch</span>
+        <span>DM to schedule • Private instruction available</span>
     <main>
       <section class="hero">
         <div class="container hero-grid">
