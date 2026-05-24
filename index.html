@@ -122,6 +122,226 @@
 
       @media (min-width: 860px) {
         .hero-wrap { grid-template-columns: 1.4fr 1fr; }
+    <title>SMB Fastpitch | Home</title>
+    <meta
+      name="description"
+      content="SMB Fastpitch official site — news, team bio, and sign-up information."
+    />
+    <style>
+      :root {
+        --bg: #f7f9fc;
+        --surface: #ffffff;
+        --text: #16202a;
+        --muted: #4c5d70;
+        --brand: #005bbb;
+        --brand-2: #003f80;
+        --border: #d9e2ec;
+        --radius: 14px;
+        --shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+        --max: 1100px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        line-height: 1.5;
+        color: var(--text);
+        background: linear-gradient(180deg, #f8fbff 0%, var(--bg) 100%);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        width: min(100% - 2rem, var(--max));
+        margin-inline: auto;
+      }
+
+      .site-header {
+        border-bottom: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.88);
+        position: sticky;
+        top: 0;
+        backdrop-filter: blur(8px);
+        z-index: 10;
+      }
+
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        min-height: 72px;
+      }
+
+      .logo {
+        font-weight: 700;
+        letter-spacing: 0.2px;
+      }
+
+      .nav {
+        display: flex;
+        gap: 0.35rem;
+        flex-wrap: wrap;
+      }
+
+      .nav a {
+        padding: 0.55rem 0.8rem;
+        border-radius: 10px;
+        color: var(--muted);
+        font-weight: 500;
+      }
+
+      .nav a:hover,
+      .nav a:focus-visible {
+        background: #eaf2ff;
+        color: var(--brand-2);
+        outline: none;
+      }
+
+      .hero {
+        padding: 3.5rem 0 2.75rem;
+      }
+
+      .hero-grid {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+
+      .hero-copy {
+        padding: 1.5rem;
+      }
+
+      h1,
+      h2 {
+        line-height: 1.2;
+        margin: 0;
+      }
+
+      h1 {
+        font-size: clamp(1.8rem, 4vw, 2.75rem);
+        margin-bottom: 0.8rem;
+      }
+
+      .lead {
+        color: var(--muted);
+        font-size: clamp(1rem, 1.6vw, 1.125rem);
+        max-width: 60ch;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: 1.2rem;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.75rem 1rem;
+        border-radius: 10px;
+        font-weight: 600;
+      }
+
+      .btn-primary {
+        background: var(--brand);
+        color: #fff;
+      }
+
+      .btn-primary:hover,
+      .btn-primary:focus-visible {
+        background: var(--brand-2);
+      }
+
+      .btn-secondary {
+        border: 1px solid var(--border);
+        background: #fff;
+      }
+
+      .stats {
+        padding: 1.25rem;
+        display: grid;
+        gap: 0.75rem;
+      }
+
+      .stat {
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 0.9rem;
+        background: #fbfdff;
+      }
+
+      .stat strong {
+        display: block;
+        font-size: 1.2rem;
+      }
+
+      .section {
+        padding: 1rem 0 2.75rem;
+      }
+
+      .feature-grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+      }
+
+      .feature {
+        padding: 1.1rem;
+      }
+
+      .feature p {
+        margin: 0.45rem 0 0;
+        color: var(--muted);
+      }
+
+      .site-footer {
+        border-top: 1px solid var(--border);
+        padding: 1.5rem 0;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      @media (min-width: 700px) {
+        .hero-grid {
+          grid-template-columns: 1.4fr 1fr;
+          align-items: stretch;
+        }
+
+        .feature-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .hero-copy {
+          padding: 2rem;
+        }
+
+        .stats {
+          padding: 1.5rem;
+        }
       }
     </style>
   </head>
@@ -129,6 +349,8 @@
     <header class="site-header">
       <div class="container head">
         <a href="index.html" class="brand">SMB Fastpitch</a>
+      <div class="container header-inner">
+        <a class="logo" href="index.html">SMB Fastpitch</a>
         <nav class="nav" aria-label="Primary navigation">
           <a href="index.html" aria-current="page">Home</a>
           <a href="bio.html">Bio</a>
@@ -175,6 +397,60 @@
       <div class="container foot">
         <span>© <span id="year">2026</span> SMB Fastpitch</span>
         <span>DM to schedule • Private instruction available</span>
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <article class="card hero-copy">
+            <h1>Fastpitch community, built for growth.</h1>
+            <p class="lead">
+              Welcome to SMB Fastpitch. This starter homepage is designed to
+              work smoothly across phones, tablets, and desktops while giving
+              you a clean base to expand your content.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="signup.html">Join Our Updates</a>
+              <a class="btn btn-secondary" href="bio.html">Read Team Bio</a>
+            </div>
+          </article>
+
+          <aside class="card stats" aria-label="Quick highlights">
+            <div class="stat">
+              <strong>Mobile-first</strong>
+              <span>Responsive layout optimized for common screen sizes.</span>
+            </div>
+            <div class="stat">
+              <strong>Easy to host</strong>
+              <span>Ready for GitHub Pages static hosting.</span>
+            </div>
+            <div class="stat">
+              <strong>Simple to grow</strong>
+              <span>Add pages, schedules, media, and forms over time.</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container feature-grid">
+          <article class="card feature">
+            <h2>Homepage</h2>
+            <p>Use this area for announcements, schedules, and spotlight content.</p>
+          </article>
+          <article class="card feature">
+            <h2>Bio Page</h2>
+            <p>Tell your story, coaching philosophy, and player development focus.</p>
+          </article>
+          <article class="card feature">
+            <h2>Sign Up</h2>
+            <p>Collect contact info for clinics, tryouts, and updates.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        © <span id="year">2026</span> SMB Fastpitch. All rights reserved.
       </div>
     </footer>
 

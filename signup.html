@@ -21,12 +21,30 @@
       .btn:hover,.btn:focus-visible{background:#2d2d2d}
       footer{border-top:1px solid var(--line);margin-top:2rem}.foot{padding:1rem 0 1.5rem;color:#555}
       @media (min-width:760px){.two{grid-template-columns:1fr 1fr}}
+    <meta name="description" content="Sign up for SMB Fastpitch updates, tryouts, and clinic information." />
+    <style>
+      :root{--bg:#f7f9fc;--surface:#fff;--text:#16202a;--muted:#4c5d70;--brand:#005bbb;--brand2:#003f80;--border:#d9e2ec;--radius:14px;--max:860px}
+      *{box-sizing:border-box} body{margin:0;font-family:Inter,"Segoe UI",Roboto,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.5}
+      .container{width:min(100% - 2rem,var(--max));margin-inline:auto} a{text-decoration:none;color:inherit}
+      header{position:sticky;top:0;background:#ffffffef;border-bottom:1px solid var(--border);backdrop-filter:blur(8px)}
+      .head{min-height:70px;display:flex;justify-content:space-between;align-items:center;gap:1rem}.nav{display:flex;gap:.4rem;flex-wrap:wrap}
+      .nav a{padding:.5rem .75rem;border-radius:10px;color:var(--muted)} .nav a:hover,.nav a:focus-visible{background:#eaf2ff;color:var(--brand2);outline:none}
+      main{padding:2.2rem 0}.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.2rem}
+      h1{font-size:clamp(1.7rem,3vw,2.3rem);margin-top:0}.muted{color:var(--muted)}
+      form{display:grid;gap:.9rem;margin-top:1rem} .field{display:grid;gap:.35rem}
+      label{font-weight:600} input,select,textarea{width:100%;padding:.68rem .75rem;border:1px solid #bcc9d8;border-radius:10px;font:inherit}
+      input:focus,select:focus,textarea:focus{outline:2px solid #9bc2ff;outline-offset:1px;border-color:#7ca8ee}
+      button{border:0;background:var(--brand);color:#fff;padding:.78rem 1rem;border-radius:10px;font-weight:700;cursor:pointer}
+      button:hover,button:focus-visible{background:var(--brand2)}
+      footer{border-top:1px solid var(--border);padding:1.5rem 0;color:var(--muted)}
+      @media (min-width:760px){.two{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}}
     </style>
   </head>
   <body>
     <header>
       <div class="container head">
         <a href="index.html" class="brand">SMB Fastpitch</a>
+        <a href="index.html"><strong>SMB Fastpitch</strong></a>
         <nav class="nav" aria-label="Primary navigation">
           <a href="index.html">Home</a>
           <a href="bio.html">Bio</a>
@@ -40,6 +58,8 @@
         <span class="tag">Now Booking Lessons</span>
         <h1>Request a <span class="accent">Session</span></h1>
         <p>Tell us about your athlete and goals. We’ll follow up with availability and next steps.</p>
+        <h1>Sign Up for Updates</h1>
+        <p class="muted">Complete this form to receive announcements for tryouts, clinics, and team events.</p>
 
         <form action="#" method="post">
           <div class="two">
@@ -72,6 +92,13 @@
               <option value="velocity">Velocity + Control</option>
               <option value="mental-approach">Mental Approach</option>
               <option value="general">General Development</option>
+            <label for="interest">Primary Interest</label>
+            <select id="interest" name="interest" required>
+              <option value="" selected disabled>Select one</option>
+              <option value="tryouts">Tryouts</option>
+              <option value="clinics">Clinics</option>
+              <option value="private-lessons">Private Lessons</option>
+              <option value="general-updates">General Updates</option>
             </select>
           </div>
 
@@ -81,6 +108,11 @@
           </div>
 
           <button type="submit" class="btn">Submit Request</button>
+            <label for="message">Message (optional)</label>
+            <textarea id="message" name="message" rows="5" placeholder="Anything you'd like us to know?"></textarea>
+          </div>
+
+          <button type="submit">Submit</button>
         </form>
       </div>
     </main>
@@ -89,5 +121,8 @@
       <div class="container foot">© <span id="year">2026</span> SMB Fastpitch</div>
     </footer>
     <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+      <div class="container">© <span id="year">2026</span> SMB Fastpitch</div>
+    </footer>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   </body>
 </html>
