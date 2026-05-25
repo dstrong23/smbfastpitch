@@ -57,19 +57,8 @@
         border-radius: 16px;
         padding: 1.25rem;
       }
-      .kicker {
-        display: inline-block;
-        font-size: .78rem;
-        font-weight: 800;
-        letter-spacing: .8px;
-        text-transform: uppercase;
-        padding: .34rem .6rem;
-        background: #fee7e2;
-        color: #62261e;
-        border-radius: 999px;
-      }
       h1 {
-        margin: .75rem 0 .65rem;
+        margin: 0 0 .65rem;
         line-height: 1.05;
         font-size: clamp(2rem, 6vw, 4.2rem);
         text-transform: uppercase;
@@ -79,11 +68,13 @@
       .hero-heading-wrap {
         display: grid;
         gap: 1rem;
-        align-items: center;
+        align-items: start;
       }
       .marquee-image {
         display: block;
-        width: min(100%, 320px);
+        width: 397px;
+        max-width: 100%;
+        height: auto;
         justify-self: center;
         filter: drop-shadow(0 18px 22px rgba(0,0,0,0.18));
       }
@@ -130,12 +121,11 @@
 
       footer { border-top: 1px solid var(--line); margin-top: 2rem; }
       .foot { padding: 1rem 0 1.8rem; color: #555; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-      .footer-links { display: flex; gap: 1rem; flex-wrap: wrap; font-weight: 700; }
+      .footer-links { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; font-weight: 700; }
       .footer-links a:hover,.footer-links a:focus-visible { color: var(--accent-dark); outline: none; }
 
       @media (min-width: 860px) {
-        .hero-wrap { grid-template-columns: 1.4fr 1fr; }
-        .hero-heading-wrap { grid-template-columns: minmax(0, 1fr) minmax(180px, 320px); }
+        .hero-heading-wrap { grid-template-columns: minmax(0, 1fr) minmax(180px, 397px); }
     <title>Vanaessa Strong Softball | Home</title>
     <meta
       name="description"
@@ -361,10 +351,7 @@
   </head>
   <body>
     <header class="site-header">
-      <div class="container head">
-        <a href="index.html" class="brand">Vanaessa Strong Softball</a>
       <div class="container header-inner">
-        <a class="logo" href="index.html">Vanaessa Strong Softball</a>
         <nav class="nav" aria-label="Primary navigation">
           <a href="index.html" aria-current="page">Home</a>
           <a href="bio.html">Bio</a>
@@ -378,24 +365,24 @@
         <section class="panel">
           <div class="hero-heading-wrap">
             <div>
-              <span class="kicker">Elite Softball</span>
               <h1>Pitching <span class="accent">Lessons</span></h1>
               <p class="lead">Build confidence. Refine your skills. Elevate your game with focused, one-on-one instruction tailored to every athlete.</p>
+
+              <p class="script">Train with a high-level pitcher</p>
+
+              <div class="points" aria-label="Lesson highlights">
+                <div class="point">1-on-1 Pitching Instruction</div>
+                <div class="point">Spin • Velocity • Control</div>
+                <div class="point">Mental Approach &amp; Game Strategy</div>
+                <div class="point">All Skill Levels Welcome</div>
+              </div>
+
+              <div class="cta-row">
+                <a href="signup.html" class="btn btn-primary">Now Booking Lessons</a>
+                <a href="bio.html" class="btn btn-secondary">Meet the Coach</a>
+              </div>
             </div>
             <img class="marquee-image" src="images/marquee-vanessa.png" alt="Vanessa pitching for Vanaessa Strong Softball" />
-          </div>
-          <p class="script">Train with a high-level pitcher</p>
-
-          <div class="points" aria-label="Lesson highlights">
-            <div class="point">1-on-1 Pitching Instruction</div>
-            <div class="point">Spin • Velocity • Control</div>
-            <div class="point">Mental Approach &amp; Game Strategy</div>
-            <div class="point">All Skill Levels Welcome</div>
-          </div>
-
-          <div class="cta-row">
-            <a href="signup.html" class="btn btn-primary">Now Booking Lessons</a>
-            <a href="bio.html" class="btn btn-secondary">Meet the Coach</a>
           </div>
         </section>
 
@@ -412,67 +399,6 @@
       </div>
     </main>
 
-    <footer>
-      <div class="container foot">
-        <nav class="footer-links" aria-label="Footer navigation">
-          <a href="index.html">Home</a>
-          <a href="bio.html">Bio</a>
-          <a href="signup.html">Sign Up</a>
-        </nav>
-      </div>
-    </footer>
-
-    <main>
-      <section class="hero">
-        <div class="container hero-grid">
-          <article class="card hero-copy">
-            <h1>Fastpitch community, built for growth.</h1>
-            <p class="lead">
-              Welcome to Vanaessa Strong Softball. This starter homepage is designed to
-              work smoothly across phones, tablets, and desktops while giving
-              you a clean base to expand your content.
-            </p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="signup.html">Join Our Updates</a>
-              <a class="btn btn-secondary" href="bio.html">Read Team Bio</a>
-            </div>
-          </article>
-
-          <aside class="card stats" aria-label="Quick highlights">
-            <div class="stat">
-              <strong>Mobile-first</strong>
-              <span>Responsive layout optimized for common screen sizes.</span>
-            </div>
-            <div class="stat">
-              <strong>Easy to host</strong>
-              <span>Ready for GitHub Pages static hosting.</span>
-            </div>
-            <div class="stat">
-              <strong>Simple to grow</strong>
-              <span>Add pages, schedules, media, and forms over time.</span>
-            </div>
-          </aside>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container feature-grid">
-          <article class="card feature">
-            <h2>Homepage</h2>
-            <p>Use this area for announcements, schedules, and spotlight content.</p>
-          </article>
-          <article class="card feature">
-            <h2>Bio Page</h2>
-            <p>Tell your story, coaching philosophy, and player development focus.</p>
-          </article>
-          <article class="card feature">
-            <h2>Sign Up</h2>
-            <p>Collect contact info for clinics, tryouts, and updates.</p>
-          </article>
-        </div>
-      </section>
-    </main>
-
     <footer class="site-footer">
       <div class="container">
         <nav class="footer-links" aria-label="Footer navigation">
@@ -483,8 +409,5 @@
       </div>
     </footer>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
   </body>
 </html>
