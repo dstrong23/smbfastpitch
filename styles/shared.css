@@ -14,6 +14,15 @@ a {
   text-decoration: none;
 }
 
+main a {
+  color: #d96452;
+}
+
+main a:hover,
+main a:focus-visible {
+  text-decoration: underline;
+}
+
 .container {
   width: min(100% - 2rem, var(--max));
   margin-inline: auto;
