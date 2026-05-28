@@ -7,107 +7,57 @@
     <meta name="description" content="Coach bio, credentials, and softball development philosophy." />
     <style>
       :root { --bg:#f4f4f4; --paper:#fff; --ink:#101010; --accent:#ef7b68; --line:#d9d9d9; --max:960px; }
-      *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Segoe UI,Arial,sans-serif}
-      .container{width:min(100% - 2rem,var(--max));margin-inline:auto} a{text-decoration:none;color:inherit}
-      header{position:sticky;top:0;background:#fffffff0;border-bottom:1px solid var(--line)} .head{min-height:72px;display:flex;justify-content:space-between;align-items:center;gap:1rem}
-      .brand{font-weight:900;text-transform:uppercase} .nav{display:flex;gap:.35rem;flex-wrap:wrap} .nav a{padding:.52rem .75rem;border-radius:10px;font-weight:600} .nav a:hover,.nav a:focus-visible{background:#ffe8e3;outline:none}
       main{padding:1.8rem 0} .card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:1.2rem}
       h1{margin:.25rem 0 .7rem;font-size:clamp(1.7rem,4vw,2.7rem);text-transform:uppercase} .accent{color:#d96452}
-      .tag{display:inline-block;background:#fee7e2;padding:.3rem .6rem;border-radius:999px;font-weight:800;font-size:.8rem;text-transform:uppercase}
+      .bio-headshot{float:left;width:300px;max-width:42%;height:auto;margin:0 1.25rem 1rem 0;border-radius:12px;border:1px solid var(--line)}
       .grid{display:grid;grid-template-columns:1fr;gap:1rem;margin-top:1rem} ul{margin:.5rem 0 .2rem;padding-left:1.15rem}
-      li{margin-bottom:.45rem} footer{border-top:1px solid var(--line);margin-top:2rem}.foot{padding:1rem 0 1.5rem;color:#555}.footer-links{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;font-weight:700}
+      li{margin-bottom:.45rem} @media (max-width:640px){.bio-headshot{float:none;display:block;max-width:100%;margin:0 0 1rem}}
       @media (min-width:820px){.grid{grid-template-columns:1fr 1fr}}
     <meta name="description" content="Learn more about Vanaessa Strong Softball, our mission, and coaching philosophy." />
     <style>
       :root{--bg:#f7f9fc;--surface:#fff;--text:#16202a;--muted:#4c5d70;--brand:#005bbb;--brand2:#003f80;--border:#d9e2ec;--radius:14px;--max:900px}
-      *{box-sizing:border-box} body{margin:0;font-family:Inter,"Segoe UI",Roboto,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.55}
-      a{text-decoration:none;color:inherit}.container{width:min(100% - 2rem,var(--max));margin-inline:auto}
-      header{position:sticky;top:0;background:#ffffffef;backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
-      .head{min-height:70px;display:flex;justify-content:space-between;align-items:center;gap:1rem}.nav{display:flex;gap:.4rem;flex-wrap:wrap}
-      .nav a{padding:.5rem .75rem;border-radius:10px;color:var(--muted)} .nav a:hover,.nav a:focus-visible{background:#eaf2ff;color:var(--brand2);outline:none}
       main{padding:2.2rem 0}.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:1.25rem}
       h1{font-size:clamp(1.75rem,3vw,2.4rem);margin:.2rem 0 .75rem} h2{margin-top:1.2rem}
       .muted{color:var(--muted)} .grid{display:grid;gap:1rem;margin-top:1rem;grid-template-columns:1fr}
       .pill{display:inline-block;background:#eaf2ff;color:var(--brand2);padding:.25rem .6rem;border-radius:999px;font-weight:600;font-size:.9rem}
-      footer{border-top:1px solid var(--border);padding:1.5rem 0;color:var(--muted)}
+      
       @media (min-width:800px){.grid{grid-template-columns:1fr 1fr}}
     </style>
+    <link rel="stylesheet" href="styles/shared.css" />
   </head>
   <body>
-    <header>
-      <div class="container head">
-        <a href="index.html" class="brand">Vanaessa Strong Softball</a>
-        <a href="index.html"><strong>Vanaessa Strong Softball</strong></a>
-        <nav class="nav" aria-label="Primary navigation">
-          <a href="index.html">Home</a>
-          <a href="bio.html" aria-current="page">Bio</a>
-          <a href="signup.html">Sign Up</a>
-        </nav>
-      </div>
-    </header>
+    <div data-include="components/navigation.html"></div>
 
     <main>
       <div class="container">
-        <section class="card">
-          <span class="tag">Coach Bio</span>
-          <h1>Meet Your <span class="accent">Pitching Coach</span></h1>
+        <section class="card" aria-label="Coach bio">
+          <h1>Meet <span class="accent">Vanessa Strong</span></h1>
+          <img class="bio-headshot" src="images/headshot-vanessa.webp" alt="Vanessa Strong Softball pitching coach" />
+          <p>A standout pitcher and Freedom High School alum, brings years of elite experience after competing at the Division I level for the <a href="https://pacifictigers.com/sports/softball/roster/vanessa--strong/5079">University of the Pacific</a>. A consistent leader in the circle, she logged over 400 collegiate innings, racked up hundreds of strikeouts, and earned multiple WCC All-Academic honors including multiple Player of the Week honors and team MVP. While posting dominant performances, including complete games, she also earned a Bachelors and two Masters degrees in Kinesology and Education. In high school, she was a four-time First Team All-BVAL selection, two-time league MVP, NCS champion, and Bay Area News Group First Team honoree, earned multiple Cal-Hi All State honors boasting a career 1.48 ERA, 694 strikeouts, and two perfect games.</p>
           <p>I help athletes build confidence and command in the circle through detailed mechanics, strategic thinking, and competitive mindset training.</p>
-        </section>
 
-        <section class="grid" aria-label="Bio highlights">
-          <article class="card">
-            <h2>Coaching Philosophy</h2>
-            <p>Every athlete learns differently. Sessions are customized to improve consistency, spin efficiency, control, and game-time decision making.</p>
-          </article>
-          <article class="card">
-            <h2>Who I Train</h2>
-            <p>Beginners, intermediate, and advanced pitchers are all welcome. We build strong fundamentals first, then layer advanced tools and strategy.</p>
-          </article>
-          <article class="card">
-            <h2>Focus Areas</h2>
-            <ul>
-              <li>Pitch mechanics and movement quality</li>
-              <li>Velocity progression and command</li>
-              <li>Mental approach and confidence</li>
-              <li>Game planning and hitter reads</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h2>Service Area</h2>
-            <p>East Bay / Brentwood area, with scheduling options for private instruction and recurring development plans.</p>
-    <main>
-      <div class="container">
-        <span class="pill">About Us</span>
-        <h1>Our Team Bio</h1>
-        <p class="muted">Vanaessa Strong Softball focuses on skill development, confidence, and competitive growth in a positive team-first environment.</p>
-
-        <section class="card" aria-label="Mission and philosophy">
-          <h2>Mission</h2>
-          <p>Develop well-rounded athletes through strong fundamentals, consistent effort, and respectful sportsmanship on and off the field.</p>
           <h2>Coaching Philosophy</h2>
-          <p>We coach with a balance of accountability and encouragement, emphasizing mechanics, game IQ, and mental toughness.</p>
-        </section>
+          <p>Every athlete learns differently. Sessions are customized to improve consistency, spin efficiency, control, and game-time decision making.</p>
 
-        <section class="grid" aria-label="Program highlights">
-          <article class="card">
-            <h2>Player Development</h2>
-            <p>Age-appropriate training plans with clear progression in hitting, fielding, pitching, and baserunning.</p>
-          </article>
-          <article class="card">
-            <h2>Team Culture</h2>
-            <p>Communication, commitment, and support are the foundation of how we compete and represent our community.</p>
-          </article>
+          <h2>Who I Train</h2>
+          <p>Beginners, intermediate, and advanced pitchers are all welcome. We build strong fundamentals first, then layer advanced tools and strategy.</p>
+
+          <h2>Focus Areas</h2>
+          <ul>
+            <li>Pitch mechanics and movement quality</li>
+            <li>Velocity progression and command</li>
+            <li>Mental approach and confidence</li>
+            <li>Game planning and hitter reads</li>
+          </ul>
+
+          <h2>Service Area</h2>
+          <p>East Bay / Brentwood area, with scheduling options for private instruction and recurring development plans.</p>
         </section>
       </div>
     </main>
 
-    <footer>
-      <div class="container foot"><nav class="footer-links" aria-label="Footer navigation"><a href="index.html">Home</a><a href="bio.html">Bio</a><a href="signup.html">Sign Up</a></nav></div>
-    </footer>
-    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
-    <footer>
-      <div class="container"><nav class="footer-links" aria-label="Footer navigation"><a href="index.html">Home</a><a href="bio.html">Bio</a><a href="signup.html">Sign Up</a></nav></div>
-    </footer>
-    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <div data-include="components/footer.html"></div>
+
+    <script src="scripts/includes.js"></script>
   </body>
 </html>
