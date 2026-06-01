@@ -46,66 +46,28 @@
         color: var(--muted);
       }
 
-      form {
-        display: grid;
-        gap: 0.85rem;
+      .form-note {
+        margin: 0.75rem 0 0;
+        font-size: 0.95rem;
+      }
+
+      .google-form-wrap {
         margin-top: 1rem;
-      }
-
-      .field {
-        display: grid;
-        gap: 0.3rem;
-      }
-
-      .two {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 0.85rem;
-      }
-
-      label {
-        font-weight: 700;
-      }
-
-      input,
-      select,
-      textarea {
         width: 100%;
-        font: inherit;
-        padding: 0.68rem 0.72rem;
-        border: 1px solid #bfc6cc;
         border-radius: 10px;
-        background: #ffffff;
+        overflow: hidden;
       }
 
-      input:focus,
-      select:focus,
-      textarea:focus {
-        outline: 2px solid #ffb3a6;
-        outline-offset: 1px;
-        border-color: #e58c7b;
-      }
-
-      .btn {
-        margin-top: 0.2rem;
+      .google-form {
+        display: block;
+        width: 100%;
+        height: 1500px;
         border: 0;
-        background: #111111;
-        color: #ffffff;
-        padding: 0.82rem 1rem;
-        border-radius: 10px;
-        font-weight: 800;
-        text-transform: uppercase;
-        cursor: pointer;
       }
 
-      .btn:hover,
-      .btn:focus-visible {
-        background: #2d2d2d;
-      }
-
-      @media (min-width: 760px) {
-        .two {
-          grid-template-columns: 1fr 1fr;
+      @media (max-width: 640px) {
+        .google-form {
+          height: 1700px;
         }
       }
     </style>
@@ -118,49 +80,17 @@
       <div class="container card">
         <h1>Request a <span class="accent">Session</span></h1>
         <p class="muted">Tell us about your athlete and goals. We will follow up with availability and next steps for private softball pitching lessons in Brentwood and the East Bay.</p>
+        <p class="muted form-note">Submit your request here and we will follow up by email.</p>
 
-        <form action="#" method="post">
-          <div class="two">
-            <div class="field">
-              <label for="first-name">First Name</label>
-              <input id="first-name" name="first_name" type="text" autocomplete="given-name" required />
-            </div>
-            <div class="field">
-              <label for="last-name">Last Name</label>
-              <input id="last-name" name="last_name" type="text" autocomplete="family-name" required />
-            </div>
-          </div>
-
-          <div class="two">
-            <div class="field">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" autocomplete="email" required />
-            </div>
-            <div class="field">
-              <label for="phone">Phone</label>
-              <input id="phone" name="phone" type="tel" autocomplete="tel" />
-            </div>
-          </div>
-
-          <div class="field">
-            <label for="interest">Primary Focus</label>
-            <select id="interest" name="interest" required>
-              <option value="" selected disabled>Select one</option>
-              <option value="mechanics">Mechanics</option>
-              <option value="velocity">Velocity and Control</option>
-              <option value="mental-approach">Mental Approach</option>
-              <option value="private-lessons">Private Lessons</option>
-              <option value="general">General Development</option>
-            </select>
-          </div>
-
-          <div class="field">
-            <label for="message">Athlete Goals</label>
-            <textarea id="message" name="message" rows="5" placeholder="Share age, experience level, goals, and preferred availability."></textarea>
-          </div>
-
-          <button type="submit" class="btn">Submit Request</button>
-        </form>
+        <div class="google-form-wrap">
+          <iframe
+            class="google-form"
+            src="https://docs.google.com/forms/d/1Vk4aUP8Fd9EoJ0GfbdXJZfbzCnGcDAokx8IoLyIXhNI/viewform?embedded=true"
+            title="Vanessa Strong Softball lesson request form"
+          >
+            Loading...
+          </iframe>
+        </div>
       </div>
     </main>
 
